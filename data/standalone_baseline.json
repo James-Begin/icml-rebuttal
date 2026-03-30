@@ -1,0 +1,21 @@
+{
+  "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "evaluation_format": "binary pairwise",
+  "n_runs": 3,
+  "TruthfulQA": {
+    "acc_parseable_mean": 0.702,
+    "acc_parseable_sd": 0.017,
+    "ci95": 0.017,
+    "ci95_lower": 0.685,
+    "ci95_upper": 0.719,
+    "published_mc2_reference": 0.683,
+    "difference_from_published": 0.019
+  },
+  "GPQA_Binary": {
+    "acc_parseable_mean": 0.498,
+    "acc_parseable_sd": 0.026,
+    "ci95": 0.026,
+    "ci95_lower": 0.473,
+    "ci95_upper": 0.524
+  }
+}

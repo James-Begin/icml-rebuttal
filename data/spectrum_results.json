@@ -1,0 +1,74 @@
+{
+    "Llama8B_10Agents_1v9_Malicious": {
+        "Malicious Count": 1,
+        "Market Inf (Start)": 0.07033930951157659,
+        "Market Inf (End)": 3.970532574949392e-07,
+        "Market Acc": 0.77,
+        "Debate Acc": 0.7233333333333334,
+        "Vote Acc": 0.5966666666666667
+    },
+    "Llama8B_10Agents_2v8_Malicious": {
+        "Malicious Count": 2,
+        "Market Inf (Start)": 0.10746703550075948,
+        "Market Inf (End)": 8.378531327811447e-05,
+        "Market Acc": 0.7466666666666667,
+        "Debate Acc": 0.7033333333333334,
+        "Vote Acc": 0.63
+    },
+    "Llama8B_10Agents_3v7_Malicious": {
+        "Malicious Count": 3,
+        "Market Inf (Start)": 0.015861768719020338,
+        "Market Inf (End)": 0.00016244175965947916,
+        "Market Acc": 0.7533333333333334,
+        "Debate Acc": 0.6833333333333333,
+        "Vote Acc": 0.54
+    },
+    "Llama8B_10Agents_4v6_Malicious": {
+        "Malicious Count": 4,
+        "Market Inf (Start)": 0.10298099706739322,
+        "Market Inf (End)": 1.4216467382847438e-20,
+        "Market Acc": 0.74,
+        "Debate Acc": 0.6533333333333333,
+        "Vote Acc": 0.56
+    },
+    "Llama8B_10Agents_5v5_Malicious": {
+        "Malicious Count": 5,
+        "Market Inf (Start)": 0.27900095024002697,
+        "Market Inf (End)": 0.0024593132352072633,
+        "Market Acc": 0.6833333333333335,
+        "Debate Acc": 0.6366666666666667,
+        "Vote Acc": 0.5833333333333334
+    },
+    "Llama8B_10Agents_6v4_Malicious": {
+        "Malicious Count": 6,
+        "Market Inf (Start)": 0.16849931284486588,
+        "Market Inf (End)": 0.3219664917503085,
+        "Market Acc": 0.7266666666666667,
+        "Debate Acc": 0.6433333333333333,
+        "Vote Acc": 0.49333333333333335
+    },
+    "Llama8B_10Agents_7v3_Malicious": {
+        "Malicious Count": 7,
+        "Market Inf (Start)": 0.35431697271113705,
+        "Market Inf (End)": 0.21668268569885676,
+        "Market Acc": 0.7233333333333334,
+        "Debate Acc": 0.6866666666666666,
+        "Vote Acc": 0.49333333333333335
+    },
+    "Llama8B_10Agents_8v2_Malicious": {
+        "Malicious Count": 8,
+        "Market Inf (Start)": 0.12448882479436742,
+        "Market Inf (End)": 0.15693357227940213,
+        "Market Acc": 0.65,
+        "Debate Acc": 0.68,
+        "Vote Acc": 0.49
+    },
+    "Llama8B_10Agents_9v1_Malicious": {
+        "Malicious Count": 9,
+        "Market Inf (Start)": 0.43128675172164094,
+        "Market Inf (End)": 0.18453312623874382,
+        "Market Acc": 0.5833333333333333,
+        "Debate Acc": 0.6766666666666666,
+        "Vote Acc": 0.55
+    }
+}

@@ -1,0 +1,9 @@
+numpy
+matplotlib
+pandas
+tqdm
+datasets
+transformers
+huggingface_hub
+gdown
+vllm
