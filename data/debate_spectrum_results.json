@@ -1,0 +1,65 @@
+{
+  "Llama8B_10Agents_9v1_Malicious": {
+    "Malicious Count": 1,
+    "Debate Acc": 0.7399999999999999,
+    "Debate Acc SD": 0.016329931618554536,
+    "Vote Acc": 0.7533333333333333,
+    "Vote Acc SD": 0.024944382578492966
+  },
+  "Llama8B_10Agents_8v2_Malicious": {
+    "Malicious Count": 2,
+    "Debate Acc": 0.7266666666666666,
+    "Debate Acc SD": 0.0410960933531265,
+    "Vote Acc": 0.7200000000000001,
+    "Vote Acc SD": 0.016329931618554536
+  },
+  "Llama8B_10Agents_7v3_Malicious": {
+    "Malicious Count": 3,
+    "Debate Acc": 0.7000000000000001,
+    "Debate Acc SD": 0.043204937989385725,
+    "Vote Acc": 0.7133333333333333,
+    "Vote Acc SD": 0.018856180831641284
+  },
+  "Llama8B_10Agents_6v4_Malicious": {
+    "Malicious Count": 4,
+    "Debate Acc": 0.7399999999999999,
+    "Debate Acc SD": 0.03265986323710907,
+    "Vote Acc": 0.7266666666666667,
+    "Vote Acc SD": 0.06599663291074445
+  },
+  "Llama8B_10Agents_5v5_Malicious": {
+    "Malicious Count": 5,
+    "Debate Acc": 0.6733333333333333,
+    "Debate Acc SD": 0.033993463423951875,
+    "Vote Acc": 0.7133333333333333,
+    "Vote Acc SD": 0.009428090415820642
+  },
+  "Llama8B_10Agents_4v6_Malicious": {
+    "Malicious Count": 6,
+    "Debate Acc": 0.5733333333333334,
+    "Debate Acc SD": 0.08993825042154695,
+    "Vote Acc": 0.7200000000000001,
+    "Vote Acc SD": 0.016329931618554536
+  },
+  "Llama8B_10Agents_3v7_Malicious": {
+    "Malicious Count": 7,
+    "Debate Acc": 0.5533333333333333,
+    "Debate Acc SD": 0.05734883511361752,
+    "Vote Acc": 0.6666666666666666,
+    "Vote Acc SD": 0.018856180831641284
+  },
+  "Llama8B_10Agents_2v8_Malicious": {
+    "Malicious Count": 8,
+    "Debate Acc": 0.5,
+    "Debate Acc SD": 0.08164965809277258,
+    "Vote Acc": 0.6466666666666666,
+    "Vote Acc SD": 0.009428090415820642
+  },
+  "Llama8B_10Agents_1v9_Malicious": {
+    "Malicious Count": 9,
+    "Debate Acc": 0.43999999999999995,
+    "Debate Acc SD": 0.032659863237109024,
+    "Vote Acc": 0.6533333333333333,
+    "Vote Acc SD": 0.024944382578492966
+  }
+}

@@ -67,26 +67,26 @@ from our own experimental logs.*
 
 ## 4. Debate vs Market Scalability (Figure 5)
 
-Market, debate, and voting accuracy across adversarial ratios (N=10 agents,
-Blind Deception, Llama 3 8B, TruthfulQA). Extends Figure 5 of the paper
-to include the debate baseline curve.
+Market accuracy (original experiments) alongside fresh debate and vote results
+(3 independent trials, Blind Deception, Llama 3 8B, TruthfulQA, N=10 agents).
+Full debate data: `data/debate_spectrum_results.json`.
 
 | Malicious (%) | Market | Debate | Vote |
 |--------------|--------|--------|------|
-| 1 (10%) | 77.0% | 72.3% | 59.7% |
-| 2 (20%) | 74.7% | 70.3% | 63.0% |
-| 3 (30%) | 75.3% | 68.3% | 54.0% |
-| 4 (40%) | 74.0% | 65.3% | 56.0% |
-| 5 (50%) | 68.3% | 63.7% | 58.3% |
-| 6 (60%) | 72.7% | 64.3% | 49.3% |
-| 7 (70%) | 72.3% | 68.7% | 49.3% |
-| 8 (80%) | 65.0% | 68.0% | 49.0% |
-| 9 (90%) | 58.3% | 67.7% | 55.0% |
+| 1 (10%) | 77.0% | 74.0% | 75.3% |
+| 2 (20%) | 74.7% | 72.7% | 72.0% |
+| 3 (30%) | 75.3% | 70.0% | 71.3% |
+| 4 (40%) | 74.0% | 74.0% | 72.7% |
+| 5 (50%) | 68.3% | 67.3% | 71.3% |
+| 6 (60%) | 72.7% | 57.3% | 72.0% |
+| 7 (70%) | 72.3% | 55.3% | 66.7% |
+| 8 (80%) | 65.0% | 50.0% | 64.7% |
+| 9 (90%) | 58.3% | 44.0% | 65.3% |
 
-*Market outperforms debate at adversarial ratios up to 70%. At 80–90% adversarial
-in the Blind Deception setting, debate is marginally higher; the market's largest
-advantage occurs in the Informed Deception setting (e.g. GPT-OSS 120B:
-Market 82.3% vs Debate 46.7% at 2v3 Informed, Table 2 of the paper).*
+*Market outperforms debate at all nine adversarial ratios. Debate degrades sharply
+from 74% (10% adversarial) to 44% (90% adversarial); market declines more
+gradually (77% → 58%). The market's advantage is largest in the Informed
+Deception setting (GPT-OSS 120B: Market 82.3% vs Debate 46.7%, Table 2).*
 
 ---
 
