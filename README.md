@@ -163,10 +163,6 @@ honest agents accumulate wealth.
 | File | Contents |
 |------|----------|
 | `data/llama8b_adversarial_results.json` | Full Llama 3 8B adversarial results with CIs |
-| `data/gptoss_120b_results.json` | GPT-OSS 120B market results |
-| `data/gptoss_20b_results.json` | GPT-OSS 20B market results |
-| `data/gptoss_120b_baselines.json` | GPT-OSS 120B debate/vote baselines |
-| `data/gptoss_20b_baselines.json` | GPT-OSS 20B debate/vote baselines |
 | `data/spectrum_results.json` | Figure 5 scalability data (N=10, 1–9 malicious) |
 | `data/standalone_baseline.json` | Standalone single-agent baseline results |
 | `data/wealth_ablation.json` | Wealth prompt ablation results |
