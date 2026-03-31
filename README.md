@@ -67,26 +67,28 @@ from our own experimental logs.*
 
 ## 4. Debate vs Market Scalability (Figure 5)
 
-Market accuracy (original experiments) alongside fresh debate and vote results
+Market accuracy (original LMSR experiments) alongside fresh debate and vote results
 (3 independent trials, Blind Deception, Llama 3 8B, TruthfulQA, N=10 agents).
-Full debate data: `data/debate_spectrum_results.json`.
+Debate ± values are 1 SD across 3 trials. Full data: `data/spectrum_results.json`.
 
-| Malicious (%) | Market | Debate | Vote |
-|--------------|--------|--------|------|
-| 1 (10%) | 77.0% | 74.0% | 75.3% |
-| 2 (20%) | 74.7% | 72.7% | 72.0% |
-| 3 (30%) | 75.3% | 70.0% | 71.3% |
-| 4 (40%) | 74.0% | 74.0% | 72.7% |
-| 5 (50%) | 68.3% | 67.3% | 71.3% |
-| 6 (60%) | 72.7% | 57.3% | 72.0% |
-| 7 (70%) | 72.3% | 55.3% | 66.7% |
-| 8 (80%) | 65.0% | 50.0% | 64.7% |
-| 9 (90%) | 58.3% | 44.0% | 65.3% |
+| Malicious (%) | Market | Debate | Debate SD | Vote |
+|--------------|--------|--------|-----------|------|
+| 1 (10%) | 77.0% | 74.0% | ±1.6% | 75.3% |
+| 2 (20%) | 74.7% | 72.7% | ±4.1% | 72.0% |
+| 3 (30%) | 75.3% | 70.0% | ±4.3% | 71.3% |
+| 4 (40%) | 74.0% | 74.0% | ±3.3% | 72.7% |
+| 5 (50%) | 68.3% | 67.3% | ±3.4% | 71.3% |
+| 6 (60%) | 72.7% | 57.3% | ±9.0% | 72.0% |
+| 7 (70%) | 72.3% | 55.3% | ±5.7% | 66.7% |
+| 8 (80%) | 65.0% | 50.0% | ±8.2% | 64.7% |
+| 9 (90%) | 58.3% | 44.0% | ±3.3% | 65.3% |
 
-*Market outperforms debate at all nine adversarial ratios. Debate degrades sharply
-from 74% (10% adversarial) to 44% (90% adversarial); market declines more
-gradually (77% → 58%). The market's advantage is largest in the Informed
-Deception setting (GPT-OSS 120B: Market 82.3% vs Debate 46.7%, Table 2).*
+*Market outperforms debate at all nine adversarial ratios (Blind Deception setting).
+Debate degrades sharply from 74% (10% adversarial) to 44% (90% adversarial);
+market declines more gradually (77% → 58%). Note: this experiment uses Blind
+Deception only. Under Informed Deception, the market's advantage over debate is
+model-dependent: GPT-OSS 120B Market 82.3% vs Debate 46.7% (Table 2 of paper);
+Llama 3 8B debate is competitive or slightly better under Informed majority attack.*
 
 ---
 
