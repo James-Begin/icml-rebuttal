@@ -7,8 +7,7 @@ referenced in the paper review response.
 
 ## 1. Standalone Single-Agent Baselines
 
-Single Llama 3.1 8B Instruct agent on binary pairwise format (3 independent runs,
-deterministic inference). Validates that the evaluation format is correctly calibrated
+Single Llama 3.1 8B Instruct agent on binary pairwise format (3 independent runs). Validates that the evaluation format is correctly calibrated
 against published benchmarks.
 
 | Dataset | Standalone Acc | 95% CI |
