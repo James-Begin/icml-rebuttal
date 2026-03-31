@@ -1,0 +1,116 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{titlesec}
+
+\titleformat{\section}{\normalfont\bfseries}{\thesection.}{0.5em}{}
+\titlespacing{\section}{0pt}{1.2ex}{0.5ex}
+
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+\newcommand{\supp}{\href{[ANONYMISED\_REPO\_URL]}{supplementary repository}}
+
+\begin{document}
+
+\begin{center}
+  {\large\bfseries Rebuttal --- Reviewer xd5v}
+\end{center}
+
+We thank the reviewer. Data, CIs, traces, and simulation plots are in the \supp.
+
+% ---------------------------------------------------------------
+\section*{Key Questions}
+
+\textbf{Q1: Log traces.}
+The two mechanisms have different interaction structures. The \textbf{LMSR
+market} (Section~6) has no dialogue: each agent independently observes prices
+and submits a trade. The \textbf{Semantic market} (Section~5) has a sequential
+MM~$\leftrightarrow$~Trader exchange. Full JSONL traces for both are in
+\texttt{traces/} of the \supp. In a representative LMSR episode, blind
+malicious agents inadvertently support the correct outcome---illustrating
+the imperfect adversarial effectiveness discussed below. We will revise
+Figures~1--2 to clarify this distinction.
+
+\textbf{Q2: Market population / mode collapse.}
+Each experiment uses $N{=}5$ agents of the same model family with independent
+calls and distinct role prompts. From our episode logs: $13.3\%$ of TruthfulQA
+2v3 Blind episodes had all honest agents vote incorrectly with $100\%$ pairwise
+agreement ($n{=}3$). Correlated errors are real but adversarial agents exhibit
+the same correlation (bidirectional noise). Honest claim: the market provides
+adversarial resistance, not Condorcet-style diversity. Full code released as
+supplementary.
+
+\textbf{Q3: Vote Acc $>0\%$ in 2v3 Informed.}
+The theoretical prediction is $0\%$. The observed $0.3\%$ is sampling noise:
+LLMs occasionally fail their adversarial role prompt---the same $p_\text{adv}
+< 1.0$ property discussed below. $0.3\% \approx 0$; voting is essentially
+entirely compromised. A clarifying note will be added to Section~6.2.1.
+
+% ---------------------------------------------------------------
+\section*{Absolute Baselines}
+
+Verified TruthfulQA baselines match Table~1 net gains exactly (full table:
+\supp, Section~3): Qwen~0.6B $45.7\%$, Qwen~8B $68.1\%$, Qwen~235B $89.5\%$.
+To our knowledge these are the first published Qwen3 TruthfulQA evaluations.
+Llama~3.1~8B standalone (\supp, Section~1): TruthfulQA $70.2\%$ $[68.5\%,
+71.9\%]$, consistent with MC2 $68.3\%$. Baseline columns will be added to
+all tables.
+
+% ---------------------------------------------------------------
+\section*{LMSR Choice and Economic Basis}
+
+LMSR is the only \emph{strictly proper} scoring rule among the alternatives:
+agents maximise expected utility by reporting true beliefs when resolution is
+against ground truth. CLOB lacks liquidity guarantees for thin markets ($N{=}5$);
+RFQ is bilateral and non-public; LS-LMSR trades properness for bounded loss.
+A comparative paragraph will be added to Section~3.2, and Section~2.2 expanded
+to orient economics-unfamiliar readers.
+
+% ---------------------------------------------------------------
+\section*{Section 6.3: Pump-and-Dump and the Epistemic Arbitrage Argument}
+
+Section~6.3's argument assumes fixed-directional adversaries, not wealth-maximisers.
+We concede this and will state it explicitly.
+
+\textbf{Analytical intuition on bluffing.} A bluffing adversary bets truthfully
+for $k$ rounds, then defects. LMSR payoffs are proportional to shares: malicious
+hold $3/5$, honest $2/5$. After settlement both scale by $(1{+}r)$---the $3{:}2$
+wealth ratio is preserved. Bluffing provides no relative capital advantage; the
+genuine vulnerability requires persistent cross-episode state current LLMs lack.
+
+\textbf{Empirical confirmation.} Ablation augmenting prompts with capital balances
+(\supp, Section~5): accuracy dropped $12.2$pp ($73.3\%{\to}61.1\%$), malicious
+wealth doubled ($33.3\%{\to}67.2\%$). Contribution~\#3 will be scoped to
+fixed-directional adversaries; wealth-maximising adversaries flagged as future work.
+
+% ---------------------------------------------------------------
+\section*{Debate Scalability and Attack Vectors}
+
+\textbf{Debate scalability.} We have this data. Fresh 3-trial experiments
+(\supp, Section~4): market outperforms debate at all nine adversarial ratios
+($77\%{\to}58\%$ vs debate $74\%{\to}44\%$, Blind Deception). The debate curve
+will be added to Figure~5. Blind and Informed Deception mirror the adversarial
+configurations of \citet{amayuelas2024multiagent} (EMNLP~2024 Findings), cited
+in Section~2.3; we will cross-reference explicitly in Section~6.1.
+
+% ---------------------------------------------------------------
+\section*{Revision Commitments}
+
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+  \item Baseline columns (all tables); CI columns; GPT/Llama appendix pointer
+  \item LMSR vs alternatives (Section~3.2); expand economic basis (Section~2.2)
+  \item Scope Contribution~\#3; bluffing analysis and wealth-aware limitation
+        in Section~7
+  \item Debate scalability curve in Figure~5; cross-reference
+        \citet{amayuelas2024multiagent} in Section~6.1
+  \item \textbf{Release full experimental code and traces} as supplementary
+  \item Clarifications: Figures~1--2; Section~6.2.1 (Vote $\approx 0\%$);
+        Section~6.2.3 (``scaling behavior up to $N{=}10$''); Table~3 caption;
+        define properness (Section~2.2); Brier score (Figure~3)
+\end{itemize}
+
+\end{document}

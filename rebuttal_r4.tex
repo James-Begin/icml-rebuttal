@@ -1,0 +1,123 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{titlesec}
+
+\titleformat{\section}{\normalfont\bfseries}{\thesection.}{0.5em}{}
+\titlespacing{\section}{0pt}{1.2ex}{0.5ex}
+
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+\newcommand{\supp}{\href{[ANONYMISED\_REPO\_URL]}{supplementary repository}}
+
+\begin{document}
+
+\begin{center}
+  {\large\bfseries Rebuttal --- Reviewer 4}
+\end{center}
+
+We thank the reviewer for a challenging critique identifying genuine gaps in
+how the paper frames its contributions. We address each honestly.
+
+% ---------------------------------------------------------------
+\section*{Formal Incentive Compatibility}
+
+\textit{``The mechanism does not have rigorous truthtelling guarantees\ldots the
+truthfulness framing reads more like an analogy than any rigorous definition.''}
+
+The reviewer is correct. LMSR is strictly proper when resolution is against
+external ground truth; under consensus resolution that guarantee does not apply,
+and the phrase ``our claims concern long-run coordination and robustness
+properties'' is too vague as a substitute for a formal argument. We concede
+there is no formal truthtelling guarantee in our setup.
+
+What we can claim rigorously is more modest: the LMSR cost function creates
+asymmetric costs between truth-seeking and deceptive behaviour when agents are
+imperfectly adversarial, and these costs compound over episodes into systematic
+wealth transfer. This is an empirical property of the mechanism interacting with
+observed LLM behaviour, not a theoretical guarantee. We will reframe the paper's
+incentive claims accordingly.
+
+% ---------------------------------------------------------------
+\section*{Prompts Do Not Mention Wealth ---
+``Is this just debate with a scoring formula?''}
+
+\textit{``The prompt provided on page 13 nowhere mentions wealth\ldots it's
+unclear if it demonstrates that the system is mainly a debate-like framework
+where the market is just an external scoring formula.''}
+
+The reviewer correctly observes that agents are not told their capital. This
+is intentional: wealth redistribution operates at the system level via the LMSR
+cost function, regardless of agent awareness. Agents only need some correlation
+with truth; the market amplifies that signal over episodes.
+
+To test whether this design choice is consequential, we ran an ablation
+augmenting each agent's prompt with its current capital balance and the statement
+that wealth determines future influence (\supp, Section~5; Llama~3.1~8B,
+TruthfulQA, 2v3 Informed, 3 trials):
+
+\begin{center}\small
+\begin{tabular}{lcc}
+\toprule
+\textbf{Condition} & \textbf{Market Acc} & \textbf{Mal. Wealth Share} \\
+\midrule
+No wealth in prompt (paper setup) & 73.3\% $\pm$ 7.2\% & 33.3\% \\
+Wealth in prompt                  & 61.1\% $\pm$ 3.1\% & 67.2\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+When adversarial agents know their capital determines future influence, accuracy
+drops $12.2$pp and malicious wealth capture nearly doubles. This confirms the
+mechanism is not purely instruction-following: if it were, wealth information
+would have no effect. The no-wealth design deliberately prevents a class of
+exploitation that wealth-aware adversaries execute.
+
+We are not claiming LLMs explicitly optimise for capital. The LMSR creates
+asymmetric outcomes: a lie requires a capital commitment forfeited at resolution,
+unlike debate where persuasion costs nothing. This asymmetry compounds regardless
+of agent awareness.
+
+% ---------------------------------------------------------------
+\section*{Experimental Assumptions and Scope}
+
+\textbf{Strategic adversaries.}
+The reviewer is correct that a rational, capital-maximising coalition could
+dominate by outspending honest agents; our adversaries follow fixed directional
+prompts, not wealth-optimisation. We should have stated this assumption
+explicitly. The wealth ablation shows even partial wealth-awareness makes
+adversaries more effective; fully strategic adversaries remain an open problem
+we will flag in the limitations.
+
+\textbf{Dataset memorisation.}
+GPQA Diamond is a graduate-level benchmark substantially newer than most
+pre-training data; market accuracy ($39$--$65\%$ under adversarial attack
+vs.\ $25\%$ random baseline) is consistent with TruthfulQA, suggesting genuine
+signal beyond memorisation. Truly out-of-distribution evaluation would
+strengthen the claim and we will note this in Section~7.
+
+\textbf{MCQ degradation.}
+On GPQA MCQ (2v3 Informed), market accuracy falls to $21.3\%$---below the $25\%$
+random baseline. The mechanism fails here and we do not dispute it. We will
+revise the abstract and contributions to scope robustness claims to binary
+settings upfront.
+
+% ---------------------------------------------------------------
+\section*{Revision Commitments}
+
+\begin{itemize}[noitemsep,topsep=2pt,leftmargin=*]
+  \item Reframe incentive claims as empirical; replace ``truthtelling incentives''
+        with ``asymmetric cost structure that amplifies calibration advantage''
+  \item State in Appendix~B.2 that agents do not observe their capital, and why
+  \item Include wealth-prompt ablation as evidence against pure instruction-following
+  \item State the imperfect-adversary assumption in the experimental setup;
+        flag strategic adversaries as future work
+  \item Scope robustness claims to binary settings in abstract and contributions;
+        add dataset memorisation caveat to Section~7
+\end{itemize}
+
+\end{document}

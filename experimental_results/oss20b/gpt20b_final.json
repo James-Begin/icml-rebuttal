@@ -1,0 +1,62 @@
+{
+    "TruthfulQA 3v2 Blind": {
+        "Market Inf (Start)": 0.3189777333433886,
+        "Market Inf (End)": 0.004787390084782207,
+        "Market Acc (Avg)": 0.8666666666666668
+    },
+    "TruthfulQA 3v2 Informed": {
+        "Market Inf (Start)": 0.2630626395337305,
+        "Market Inf (End)": 0.032962775186798183,
+        "Market Acc (Avg)": 0.7499999999999999
+    },
+    "TruthfulQA 2v3 Blind": {
+        "Market Inf (Start)": 0.47278958762878226,
+        "Market Inf (End)": 0.007205084729286174,
+        "Market Acc (Avg)": 0.8266666666666667
+    },
+    "TruthfulQA 2v3 Informed": {
+        "Market Inf (Start)": 0.5298267385772417,
+        "Market Inf (End)": 0.22016316620204244646,
+        "Market Acc (Avg)": 0.67
+    },
+    "GPQA Binary 3v2 Blind": {
+        "Market Inf (Start)": 0.4474683848584256,
+        "Market Inf (End)": 0.083274094095013433,
+        "Market Acc (Avg)": 0.69
+    },
+    "GPQA Binary 3v2 Informed": {
+        "Market Inf (Start)": 0.392844913653295,
+        "Market Inf (End)": 0.143031308209426093,
+        "Market Acc (Avg)": 0.5966666666666665
+    },
+    "GPQA Binary 2v3 Blind": {
+        "Market Inf (Start)": 0.6,
+        "Market Inf (End)": 0.124590674824492044,
+        "Market Acc (Avg)": 0.6266666666666667
+    },
+    "GPQA Binary 2v3 Informed": {
+        "Market Inf (Start)": 0.5217296763480198,
+        "Market Inf (End)": 0.241597753791532418,
+        "Market Acc (Avg)": 0.5933333333333336
+    },
+    "GPQA MCQ 3v2 Blind": {
+        "Market Inf (Start)": 0.39238444237258907,
+        "Market Inf (End)": 0.129153933876145118,
+        "Market Acc (Avg)": 0.46
+    },
+    "GPQA MCQ 3v2 Informed": {
+        "Market Inf (Start)": 0.2587316389533496,
+        "Market Inf (End)": 0.22886337425540212,
+        "Market Acc (Avg)": 0.35
+    },
+    "GPQA MCQ 2v3 Blind": {
+        "Market Inf (Start)": 0.3833592538050478,
+        "Market Inf (End)": 0.47813550068947889,
+        "Market Acc (Avg)": 0.41666666666666664
+    },
+    "GPQA MCQ 2v3 Informed": {
+        "Market Inf (Start)": 0.5704811529945625,
+        "Market Inf (End)": 0.84236028152629111,
+        "Market Acc (Avg)": 0.43599999999999999
+    }
+}

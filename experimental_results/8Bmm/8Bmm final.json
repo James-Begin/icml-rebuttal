@@ -1,0 +1,98 @@
+{
+    "TruthfulQA 3v2 Blind": {
+        "Market Acc": "75.67% \u00b1 2.62%",
+        "Debate Acc": "59.67% \u00b1 6.13%",
+        "Vote Acc": "57.00% \u00b1 3.74%",
+        "M Inf (Start/End/Avg)": "0.38 / 0.03 / 0.03",
+        "D Inf (Start/End/Avg)": "0.33 / 0.40 / 0.38",
+        "V Inf (Start/End/Avg)": "0.40 / 0.40 / 0.40"
+    },
+    "TruthfulQA 3v2 Informed": {
+        "Market Acc": "52.00% \u00b1 2.16%",
+        "Debate Acc": "87.00% \u00b1 3.56%",
+        "Vote Acc": "57.00% \u00b1 2.83%",
+        "M Inf (Start/End/Avg)": "0.39 / 0.61 / 0.51",
+        "D Inf (Start/End/Avg)": "0.00 / 0.13 / 0.13",
+        "V Inf (Start/End/Avg)": "0.40 / 0.40 / 0.40"
+    },
+    "TruthfulQA 2v3 Blind": {
+        "Market Acc": "67.67% \u00b1 2.49%",
+        "Debate Acc": "67.00% \u00b1 1.63%",
+        "Vote Acc": "51.67% \u00b1 5.73%",
+        "M Inf (Start/End/Avg)": "0.57 / 0.11 / 0.16",
+        "D Inf (Start/End/Avg)": "0.33 / 0.33 / 0.33",
+        "V Inf (Start/End/Avg)": "0.60 / 0.60 / 0.60"
+    },
+    "TruthfulQA 2v3 Informed": {
+        "Market Acc": "54.00% \u00b1 2.16%",
+        "Debate Acc": "84.33% \u00b1 1.25%",
+        "Vote Acc": "47.67% \u00b1 2.62%",
+        "M Inf (Start/End/Avg)": "0.57 / 0.39 / 0.51",
+        "D Inf (Start/End/Avg)": "0.00 / 0.16 / 0.16",
+        "V Inf (Start/End/Avg)": "0.60 / 0.60 / 0.60"
+    },
+    "GPQA Binary 3v2 Blind": {
+        "Market Acc": "56.00% \u00b1 6.94%",
+        "Debate Acc": "55.33% \u00b1 0.94%",
+        "Vote Acc": "50.67% \u00b1 4.92%",
+        "M Inf (Start/End/Avg)": "0.37 / 0.05 / 0.01",
+        "D Inf (Start/End/Avg)": "0.67 / 0.45 / 0.45",
+        "V Inf (Start/End/Avg)": "0.40 / 0.40 / 0.40"
+    },
+    "GPQA Binary 3v2 Informed": {
+        "Market Acc": "54.67% \u00b1 1.25%",
+        "Debate Acc": "72.00% \u00b1 2.16%",
+        "Vote Acc": "43.67% \u00b1 6.34%",
+        "M Inf (Start/End/Avg)": "0.40 / 0.33 / 0.39",
+        "D Inf (Start/End/Avg)": "0.33 / 0.28 / 0.27",
+        "V Inf (Start/End/Avg)": "0.40 / 0.40 / 0.40"
+    },
+    "GPQA Binary 2v3 Blind": {
+        "Market Acc": "57.67% \u00b1 4.19%",
+        "Debate Acc": "53.00% \u00b1 2.94%",
+        "Vote Acc": "50.67% \u00b1 0.94%",
+        "M Inf (Start/End/Avg)": "0.57 / 0.13 / 0.18",
+        "D Inf (Start/End/Avg)": "0.33 / 0.47 / 0.46",
+        "V Inf (Start/End/Avg)": "0.60 / 0.60 / 0.60"
+    },
+    "GPQA Binary 2v3 Informed": {
+        "Market Acc": "39.13% \u00b1 3.56%",
+        "Debate Acc": "74.33% \u00b1 2.62%",
+        "Vote Acc": "49.33% \u00b1 2.49%",
+        "M Inf (Start/End/Avg)": "0.58 / 0.07 / 0.84",
+        "D Inf (Start/End/Avg)": "0.33 / 0.26 / 0.26",
+        "V Inf (Start/End/Avg)": "0.60 / 0.60 / 0.60"
+    },
+    "GPQA MCQ 3v2 Blind": {
+        "Market Acc": "29.00% \u00b1 2.45%",
+        "Debate Acc": "54.00% \u00b1 0.82%",
+        "Vote Acc": "27.67% \u00b1 1.25%",
+        "M Inf (Start/End/Avg)": "0.44 / 0.19 / 0.22",
+        "D Inf (Start/End/Avg)": "0.33 / 0.46 / 0.50",
+        "V Inf (Start/End/Avg)": "0.40 / 0.40 / 0.40"
+    },
+    "GPQA MCQ 3v2 Informed": {
+        "Market Acc": "28.33% \u00b1 0.47%",
+        "Debate Acc": "72.00% \u00b1 2.16%",
+        "Vote Acc": "26.00% \u00b1 2.94%",
+        "M Inf (Start/End/Avg)": "0.42 / 0.37 / 0.42",
+        "D Inf (Start/End/Avg)": "0.33 / 0.28 / 0.27",
+        "V Inf (Start/End/Avg)": "0.40 / 0.40 / 0.40"
+    },
+    "GPQA MCQ 2v3 Blind": {
+        "Market Acc": "32.67% \u00b1 4.19%",
+        "Debate Acc": "60.00% \u00b1 2.45%",
+        "Vote Acc": "26.33% \u00b1 5.25%",
+        "M Inf (Start/End/Avg)": "0.60 / 0.68 / 0.71",
+        "D Inf (Start/End/Avg)": "0.67 / 0.40 / 0.46",
+        "V Inf (Start/End/Avg)": "0.60 / 0.60 / 0.60"
+    },
+    "GPQA MCQ 2v3 Informed": {
+        "Market Acc": "21.33% \u00b1 2.05%",
+        "Debate Acc": "77.33% \u00b1 0.47%",
+        "Vote Acc": "20.33% \u00b1 2.87%",
+        "M Inf (Start/End/Avg)": "0.65 / 0.96 / 0.93",
+        "D Inf (Start/End/Avg)": "0.00 / 0.23 / 0.22",
+        "V Inf (Start/End/Avg)": "0.60 / 0.60 / 0.60"
+    }
+}
